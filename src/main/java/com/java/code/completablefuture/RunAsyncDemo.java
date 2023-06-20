@@ -9,14 +9,19 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class RunAsyncDemo {
 
     public void saveEmployees(File jsonFile) throws ExecutionException, InterruptedException {
         ObjectMapper objectMapper=new ObjectMapper();
 
-        CompletableFuture<Void> completableFuture=CompletableFuture.runAsync(new Runnable(){
-            public void run(){
+        Executor executor= Executors.newFixedThreadPool(10);
+        //We can pass this executor as well in below method.
+        //Runnable in passed in runAsync method. So this is run() implementation.
+        CompletableFuture<Void> completableFuture=CompletableFuture.runAsync(
+                ()->{
                 List<Employees> employeesList= null;
                 try {
                     employeesList = objectMapper.readValue(jsonFile,new TypeReference<List<Employees>>() {});
@@ -27,8 +32,8 @@ public class RunAsyncDemo {
                 employeesList.stream().forEach(System.out::println);
                 System.out.println(employeesList.size());
             }
-        });
-        completableFuture.get();
+        , executor);
+        completableFuture.get(); //A blocking call
     }
 
     public static void main(String[] args){
