@@ -2,6 +2,7 @@ package com.java.code.completablefuture;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.java.code.database.GetEmployeesData;
 import com.java.code.dto.Employees;
 
 import java.io.File;
@@ -21,14 +22,8 @@ public class SupplyAsyncDemo {
 
         CompletableFuture<List<Employees>> completableFuture=CompletableFuture.supplyAsync(
                 ()->{
-                    ObjectMapper objectMapper=new ObjectMapper();
-                    List<Employees> employeesList= null;
-                    try {
-                        employeesList = objectMapper.readValue(jsonFile,new TypeReference<List<Employees>>() {});
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                return employeesList;
+                    List<Employees> employeesList= new GetEmployeesData().getEmployeesList(jsonFile);
+                    return employeesList;
                 },executor);
         try {
             return completableFuture.get();

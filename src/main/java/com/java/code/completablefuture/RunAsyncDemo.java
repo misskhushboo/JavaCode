@@ -2,6 +2,7 @@ package com.java.code.completablefuture;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.java.code.database.GetEmployeesData;
 import com.java.code.dto.Employees;
 
 import java.io.File;
@@ -22,15 +23,12 @@ public class RunAsyncDemo {
         //Runnable in passed in runAsync method. So this is run() implementation.
         CompletableFuture<Void> completableFuture=CompletableFuture.runAsync(
                 ()->{
-                List<Employees> employeesList= null;
-                try {
-                    employeesList = objectMapper.readValue(jsonFile,new TypeReference<List<Employees>>() {});
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-                System.out.println("Thread : " + Thread.currentThread().getName());
-                employeesList.stream().forEach(System.out::println);
-                System.out.println(employeesList.size());
+                    List<Employees> employeesList= new GetEmployeesData().getEmployeesList(jsonFile);
+                    return employeesList;
+
+                    System.out.println("Thread : " + Thread.currentThread().getName());
+                    employeesList.stream().forEach(System.out::println);
+                    System.out.println(employeesList.size());
             }
         , executor);
         completableFuture.get(); //A blocking call
