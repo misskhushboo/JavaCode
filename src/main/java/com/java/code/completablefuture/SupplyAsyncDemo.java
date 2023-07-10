@@ -18,9 +18,9 @@ public class SupplyAsyncDemo {
 
     public List<Employees> getEmployeesFromFile(File jsonFile){
 
-        Executor executor= Executors.newFixedThreadPool(10);
+          /*Executor executor= Executors.newFixedThreadPool(10);
 
-        CompletableFuture<List<Employees>> completableFuture=CompletableFuture.supplyAsync(
+      CompletableFuture<List<Employees>> completableFuture=CompletableFuture.supplyAsync(
                 ()->{
                     List<Employees> employeesList= new GetEmployeesData().getEmployeesList(jsonFile);
                     return employeesList;
@@ -31,11 +31,12 @@ public class SupplyAsyncDemo {
             throw new RuntimeException(e);
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
-        }
+        }*/
+        return null;
     }
     public static void main(String[] args){
-        SupplyAsyncDemo supplyAsyncDemo = new SupplyAsyncDemo();
-        List<Employees> employeesList=supplyAsyncDemo.getEmployeesFromFile(new File("employees.json"));
-        employeesList.stream().forEach(System.out::println);
+        //SupplyAsyncDemo supplyAsyncDemo = new SupplyAsyncDemo();
+        //List<Employees> employeesList=supplyAsyncDemo.getEmployeesFromFile(new File("employees.json"));
+        //employeesList.stream().forEach(System.out::println);
     }
 }

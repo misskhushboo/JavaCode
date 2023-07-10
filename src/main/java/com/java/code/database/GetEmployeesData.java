@@ -9,7 +9,7 @@ import java.util.List;
 
 public class GetEmployeesData {
 
-    public List<Employees> getEmployeesList(File jsonFile){
+    /*public List<Employees> getEmployeesList(File jsonFile){
         List<Employees> employeesList= null;
         ObjectMapper objectMapper=new ObjectMapper();
         try {
@@ -17,5 +17,5 @@ public class GetEmployeesData {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
+    }*/
 }

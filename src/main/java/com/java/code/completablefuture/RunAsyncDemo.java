@@ -19,16 +19,16 @@ public class RunAsyncDemo {
         ObjectMapper objectMapper=new ObjectMapper();
 
         Executor executor= Executors.newFixedThreadPool(10);
-        //We can pass this executor as well in below method.
+
         //Runnable in passed in runAsync method. So this is run() implementation.
         CompletableFuture<Void> completableFuture=CompletableFuture.runAsync(
                 ()->{
-                    List<Employees> employeesList= new GetEmployeesData().getEmployeesList(jsonFile);
+                  /*  List<Employees> employeesList= new GetEmployeesData().getEmployeesList(jsonFile);
                     return employeesList;
 
                     System.out.println("Thread : " + Thread.currentThread().getName());
                     employeesList.stream().forEach(System.out::println);
-                    System.out.println(employeesList.size());
+                    System.out.println(employeesList.size());*/
             }
         , executor);
         completableFuture.get(); //A blocking call

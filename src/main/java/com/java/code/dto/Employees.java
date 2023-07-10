@@ -16,4 +16,17 @@ public class Employees {
     private String gender;
     private String rating;
 
+    private String city;
+
+    private int Salary;
+
+    public Employees(String name, String city){
+            this.employeeFirstName=name;
+            this.city=city;
+    }
+    public Employees(String name, String city, String gender){
+        this.employeeFirstName=name;
+        this.city=city;
+        this.gender=gender;
+    }
 }
