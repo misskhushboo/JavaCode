@@ -31,7 +31,6 @@ public class FIndNHighestSalary {
         List descendingOrderData=data.entrySet().stream().sorted(Collections.reverseOrder(Map.Entry.comparingByValue())).collect(Collectors.toList());
         System.out.println("Map data in ascending order:"+descendingOrderData);
 
-
         Map<Integer, List<Map.Entry<String, Integer>>> convertedData=data.entrySet().stream().collect(Collectors.groupingBy(Map.Entry::getValue));
         convertedData.forEach((e,v)->System.out.println(e +""+v));      //e.g 4500[E=4500, G=4500]
 
