@@ -1,7 +1,7 @@
-package com.assessment.parkinglot;
+package com.parkinglot;
 
-import com.assessment.parkinglot.enums.TicketType;
-import com.assessment.parkinglot.ticket.Ticket;
+import com.parkinglot.enums.TicketType;
+import com.parkinglot.ticket.Ticket;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;

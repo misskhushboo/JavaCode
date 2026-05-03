@@ -1,13 +1,12 @@
-package com.assessment.parkinglot;
+package com.parkinglot;
 
-import com.assessment.parkinglot.enums.SpotSize;
-import com.assessment.parkinglot.enums.VehicleType;
-import com.assessment.parkinglot.spots.ParkingSpot;
-import com.assessment.parkinglot.spots.SpotFactory;
+import com.parkinglot.enums.SpotSize;
+import com.parkinglot.enums.VehicleType;
+import com.parkinglot.spots.ParkingSpot;
+import com.parkinglot.spots.SpotFactory;
 import lombok.Data;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

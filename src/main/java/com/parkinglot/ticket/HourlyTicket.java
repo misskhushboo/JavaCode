@@ -1,4 +1,4 @@
-package com.assessment.parkinglot.ticket;
+package com.parkinglot.ticket;
 
 public class HourlyTicket implements TicketStrategy{
 public static final double HOURLY_RATE=.20;

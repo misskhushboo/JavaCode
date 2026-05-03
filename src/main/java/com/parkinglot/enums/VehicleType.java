@@ -1,4 +1,4 @@
-package com.assessment.parkinglot.enums;
+package com.parkinglot.enums;
 
 public enum VehicleType {
     MOTORCYCLE, CAR, BUS;

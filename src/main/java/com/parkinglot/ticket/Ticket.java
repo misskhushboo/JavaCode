@@ -1,8 +1,8 @@
-package com.assessment.parkinglot.ticket;
+package com.parkinglot.ticket;
 
-import com.assessment.parkinglot.Vehicle;
-import com.assessment.parkinglot.enums.TicketType;
-import com.assessment.parkinglot.spots.ParkingSpot;
+import com.parkinglot.Vehicle;
+import com.parkinglot.enums.TicketType;
+import com.parkinglot.spots.ParkingSpot;
 import lombok.Data;
 
 import java.time.LocalDateTime;

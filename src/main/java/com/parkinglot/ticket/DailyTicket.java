@@ -1,4 +1,4 @@
-package com.assessment.parkinglot.ticket;
+package com.parkinglot.ticket;
 
 public class DailyTicket implements TicketStrategy{
     public static final double DAILY_RATE=.10;

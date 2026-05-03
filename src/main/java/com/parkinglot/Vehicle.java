@@ -1,8 +1,7 @@
-package com.assessment.parkinglot;
+package com.parkinglot;
 
-import com.assessment.parkinglot.enums.SpotSize;
-import com.assessment.parkinglot.enums.VehicleType;
-import com.assessment.parkinglot.ticket.Ticket;
+import com.parkinglot.enums.VehicleType;
+import com.parkinglot.ticket.Ticket;
 import lombok.Data;
 
 @Data

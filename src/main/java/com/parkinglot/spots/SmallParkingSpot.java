@@ -1,9 +1,7 @@
-package com.assessment.parkinglot.spots;
+package com.parkinglot.spots;
 
-import com.assessment.parkinglot.Vehicle;
-import com.assessment.parkinglot.enums.SpotSize;
-
-import java.util.UUID;
+import com.parkinglot.Vehicle;
+import com.parkinglot.enums.SpotSize;
 
 public class SmallParkingSpot extends ParkingSpot{
 

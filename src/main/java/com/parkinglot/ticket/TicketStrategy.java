@@ -1,4 +1,4 @@
-package com.assessment.parkinglot.ticket;
+package com.parkinglot.ticket;
 
 public interface TicketStrategy {
 
