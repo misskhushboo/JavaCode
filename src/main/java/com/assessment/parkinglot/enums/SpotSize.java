@@ -1,4 +1,4 @@
-package com.assessment.parkinglot;
+package com.assessment.parkinglot.enums;
 
 public enum SpotSize {
     SMALL("SMALL"),
