@@ -1,0 +1,20 @@
+[
+{
+  "employeeId": "516908",
+  "employeeFirstName": "Khushboo",
+  "employeeLastName": "Kaur",
+  "email": "ms.khushboo13@gmail.com",
+  "phonenumber": "9811600668",
+  "gender": "female",
+  "rating" : "1"
+},
+{
+  "employeeId": "517089",
+  "employeeFirstName": "Gaurav",
+  "employeeLastName": "Singh",
+  "email": "gaurav.singh@gmail.com",
+  "phonenumber": "9822750662",
+  "gender": "male",
+  "rating" : "2"
+}
+]

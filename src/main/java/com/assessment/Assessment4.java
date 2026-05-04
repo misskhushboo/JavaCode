@@ -28,7 +28,7 @@ public class Assessment4 {
             else
                 map.put(str,1);
         }
-        Map<String, Integer> map1=inputValues.stream().collect(Collectors.groupingBy()).collect(Collectors.toMap());
+        //Map<String, Integer> map1=inputValues.stream().collect(Collectors.groupingBy()).collect(Collectors.toMap());
         map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(k->System.out.println(k.getKey()+"|"+k.getValue()));
         //inputValues.stream().
        // map.entrySet().forEach(k->System.out.println(k.getKey()+"|"+k.getValue()));
