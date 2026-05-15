@@ -3,6 +3,7 @@ package com.concurrency.threads;
 
 public class ThreadTestClass {
 
+    //Shared resource, critical resource.
     Counter counter = new Counter();
 
     public static void main(String[] args) {
